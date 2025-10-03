@@ -6,9 +6,9 @@ description: >-
   Comprehensive AI agent development framework based on MongoDB's CANVAS
   methodology. Guides teams through systematic agent planning, validation,
   and production deployment using Product → Agent → Data → Model flow.
-  Includes 8 specialized agents, POC and Production canvas templates,
-  validation checklists, and complete workflows from ideation to enterprise
-  deployment. Prevents the 6 critical failure patterns killing 95% of AI
-  agent projects.
+  Includes 10 specialized agents (planning, implementation, and governance),
+  POC and Production canvas templates, validation checklists, and complete
+  workflows from ideation to enterprise deployment. Prevents the 6 critical
+  failure patterns killing 95% of AI agent projects.
 author: BMAD Method Community
 slashPrefix: bmad-agent

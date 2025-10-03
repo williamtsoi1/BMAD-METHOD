@@ -21,7 +21,7 @@ Systematic validation and scaling using proven canvas methodology that helps the
 
 ## 🎯 What You Get
 
-### 7 Specialized Agents
+### 10 Specialized Agents
 
 1. **Agent Orchestrator** 🎯 - Primary guide through CANVAS framework
 2. **Product Strategist** 🎯 - User problem validation (POC Squares 1-2)
@@ -31,6 +31,8 @@ Systematic validation and scaling using proven canvas methodology that helps the
 6. **Production Architect** 🏭 - Enterprise scaling (Production Canvas - 11 squares)
 7. **Security & Governance Advisor** 🔒 - Compliance and policy frameworks
 8. **ROI Analyst** 📈 - Business value measurement
+9. **Agent Scrum Master (Sam)** 🏃 - Breaks down Canvas designs into actionable implementation stories
+10. **ADK Developer (Ada)** 🤖 - Google ADK implementation specialist for building production-ready agents
 
 ### 2 Canvas Templates
 
@@ -79,8 +81,10 @@ The orchestrator will guide you through:
 1. **Project Assessment** - Validate you're solving real problems
 2. **Failure Risk Check** - Identify red flags early
 3. **POC Canvas** - Systematic validation (8 squares)
-4. **Build & Test** - Rapid POC with real users
-5. **Production Canvas** - Scale what works (11 squares)
+4. **Story Creation** - Agent Scrum Master breaks canvas into implementation stories
+5. **Implementation** - ADK Developer builds agents from stories
+6. **Build & Test** - Rapid POC with real users
+7. **Production Canvas** - Scale what works (11 squares)
 
 ## 📋 The CANVAS Framework
 
@@ -118,6 +122,85 @@ Product → Agent → Data → Model
 **When?** Before writing any code.
 
 **Who?** Product Strategist → Agent Architect → Data Strategist → Model Integration Specialist
+
+### Story Creation: Bridge Design to Implementation
+
+**Why?** Canvas provides strategic design; implementation needs tactical stories.
+
+**What?** Agent Scrum Master breaks down Canvas into actionable stories:
+
+- Transform agent designs into detailed implementation stories
+- Specify ADK patterns (LlmAgent vs custom BaseAgent)
+- Define acceptance criteria and testing requirements
+- Sequence stories logically for development
+
+**When?** After POC Canvas validation, before implementation.
+
+**Who?** Agent Scrum Master (Sam) - Story preparation specialist
+
+**How?**
+
+```bash
+# Activate Agent Scrum Master
+bmad activate agent-scrum-master
+
+# Or in web UI:
+*agent-scrum-master
+
+# Create implementation stories:
+*draft              # Create next agent implementation story
+*canvas-to-stories  # Break down completed Canvas into stories
+*story-checklist    # Validate story before handoff to Ada
+```
+
+**Key Capabilities:**
+
+- Bridges Canvas framework planning to ADK code implementation
+- Creates detailed stories specifying agent type, tools, orchestration
+- Defines clear acceptance criteria and testing requirements
+- Ensures ADK Developer has all context needed
+- Sequences stories for logical implementation flow
+
+### Agent Implementation: Build with Google ADK
+
+**Why?** Canvas provides the design; ADK Developer implements production-ready code.
+
+**What?** Google Agent Development Kit (ADK) Python implementation:
+
+- LlmAgent for basic agents with tools
+- Custom BaseAgent for complex orchestration
+- Multi-agent systems with hierarchical coordination
+- Proper testing, evaluation, and deployment
+
+**When?** After POC Canvas design is validated.
+
+**Who?** ADK Developer (Ada) - Expert Google ADK implementation specialist
+
+**How?**
+
+```bash
+# Activate ADK Developer
+bmad activate adk-developer
+
+# Or in web UI:
+*adk-developer
+
+# Follow guided implementation:
+*develop-agent    # Implements agent from canvas design
+*add-tools        # Add custom tools to agents
+*setup-multi-agent # Create multi-agent systems
+*run-tests        # Execute ADK evaluations
+```
+
+**Key Capabilities:**
+
+- Implements agents using Google's code-first Python framework
+- Creates basic LlmAgent or custom BaseAgent based on requirements
+- Builds multi-agent systems with proper orchestration
+- Adds custom tools with proper signatures and docstrings
+- Implements structured I/O with Pydantic schemas
+- Sets up comprehensive testing with evaluation sets
+- Follows ADK best practices for production deployment
 
 ### Production Canvas: Scale What Works
 
@@ -200,10 +283,12 @@ Critical recommendation:
 1. Agent Orchestrator → Assess project
 2. Product Strategist → Validate user problem
 3. Complete POC Canvas (8 squares)
-4. Build MVP in days
-5. Only scale what users want
+4. Agent Scrum Master → Break canvas into implementation stories
+5. ADK Developer → Implement agents from stories
+6. Build MVP in days
+7. Only scale what users want
 
-**Outcome:** Fail fast on bad ideas, scale fast on validated ones
+**Outcome:** Fail fast on bad ideas, scale fast on validated ones with production-ready code
 
 ### For Enterprises
 
@@ -213,11 +298,13 @@ Critical recommendation:
 
 1. Validate POC with real users first
 2. Production Architect → Complete Production Canvas (11 squares)
-3. Security & Governance Advisor → Compliance framework
-4. ROI Analyst → Business value measurement
-5. Deploy with monitoring, security, governance
+3. Agent Scrum Master → Create production-grade implementation stories
+4. ADK Developer → Implement robust agent architecture
+5. Security & Governance Advisor → Compliance framework
+6. ROI Analyst → Business value measurement
+7. Deploy with monitoring, security, governance
 
-**Outcome:** Production-ready agents like Moderna (750+ agents deployed)
+**Outcome:** Production-ready agents like Moderna (750+ agents deployed) with enterprise-grade code
 
 ### For Consultants
 
@@ -227,10 +314,12 @@ Critical recommendation:
 
 1. Failure Risk Assessment → Identify red flags early
 2. POC Canvas → Structure discovery and validation
-3. Production Canvas → Comprehensive scaling roadmap
-4. Deliverables built into framework
+3. Agent Scrum Master → Create implementation stories
+4. ADK Developer → Implement production-ready code
+5. Production Canvas → Comprehensive scaling roadmap
+6. Deliverables built into framework
 
-**Outcome:** Repeatable, proven methodology for client success
+**Outcome:** Repeatable, proven methodology with actionable stories and implementable code for client success
 
 ## 📊 Success Metrics
 
