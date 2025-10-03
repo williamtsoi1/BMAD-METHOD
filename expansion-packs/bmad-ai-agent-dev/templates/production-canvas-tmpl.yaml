@@ -1,0 +1,378 @@
+name: Production Canvas - AI Agent Scaling
+description: 11-square canvas for scaling validated POC agents to enterprise production deployment
+elicit: true
+
+sections:
+  - title: "PHASE 1: PRODUCT AND SCALE PLANNING"
+    prompt: |
+      Guide through production business case and scale requirements.
+      Only scale what users validated in POC. Define clear success metrics.
+
+    content: |
+      # Production Canvas: AI Agent Scaling
+
+      ## Introduction
+
+      This Production Canvas guides you from "it works" to "it works at scale with reliability."
+
+      **Prerequisites:**
+      - ✅ Completed POC Canvas (8 squares)
+      - ✅ Built and tested POC with real users
+      - ✅ Validated users want this agent
+      - ✅ Clear business value demonstrated
+
+      **If you haven't validated POC with users, STOP. Return to POC Canvas.**
+
+      ---
+
+      ## PHASE 1: PRODUCT AND SCALE PLANNING
+
+      ### Square 1: Business Case & Scale Planning
+
+      **What did the POC validate?**
+
+      {{poc_validation_results}}
+
+      **What metrics will measure ongoing success?**
+
+      {{success_metrics}}
+
+      **How many users and interactions at launch? At 6 months? At 1 year?**
+
+      {{scale_projections}}
+
+      **How will usage expand over time?**
+
+      {{growth_strategy}}
+
+      **What's the business value / ROI?**
+
+      {{roi_calculation}}
+
+      [[LLM: Ensure POC was validated by real users. Define measurable success metrics (outcomes, not activity). Project realistic scale based on adoption data.]]
+
+      ---
+
+      ### Square 2: Production Requirements & Constraints
+
+      **Response time, availability, and throughput requirements?**
+
+      {{performance_requirements}}
+
+      **Recovery time and failover requirements?**
+
+      {{reliability_requirements}}
+
+      **Cost limits and optimization targets?**
+
+      {{cost_constraints}}
+
+      **Compliance and data protection requirements?**
+
+      {{compliance_requirements}}
+
+      [[LLM: Define SLAs (Service Level Agreements). Establish non-functional requirements. Identify regulatory constraints early.]]
+
+  - title: "PHASE 2: AGENT ARCHITECTURE"
+    prompt: |
+      Design robust agent systems with fault tolerance and scalability.
+      Multi-step workflows, specialized agent collaboration, graceful failures.
+
+    content: |
+      ---
+
+      ## PHASE 2: AGENT ARCHITECTURE
+
+      ### Square 3: Robust Agent Architecture
+
+      **How do you manage multi-step processes and workflows?**
+
+      {{workflow_orchestration}}
+
+      **How do specialized agents collaborate?**
+
+      {{multi_agent_design}}
+
+      **How do you handle failures gracefully?**
+
+      {{fault_tolerance}}
+
+      **How do you update agents without disruption?**
+
+      {{deployment_strategy}}
+
+      [[LLM: Design for complex workflows beyond POC. Plan agent coordination. Implement retry logic, fallbacks, circuit breakers. Enable blue/green deployments.]]
+
+      ---
+
+      ### Square 4: Production Memory & Context Systems
+
+      **Session, long-term, and organizational knowledge requirements?**
+
+      {{memory_types}}
+
+      **Storage and retrieval strategies?**
+
+      {{memory_architecture}}
+
+      **How do you maintain user context across sessions?**
+
+      {{context_management}}
+
+      **Retention, archival, and cleanup policies?**
+
+      {{data_lifecycle}}
+
+      [[LLM: Design three-tier memory (session, user long-term, organizational). Plan for context windows. Implement retention policies for compliance.]]
+
+  - title: "PHASE 3: DATA INFRASTRUCTURE"
+    prompt: |
+      Build unified data platform. Critical: Avoid three-database chaos.
+      Single platform for application data, vector store, and memory.
+
+    content: |
+      ---
+
+      ## PHASE 3: DATA INFRASTRUCTURE
+
+      ### Square 5: Data Architecture & Management
+
+      **Application, vector, and memory data requirements?**
+
+      {{data_requirements}}
+
+      **Ingestion, processing, and update pipelines?**
+
+      {{data_pipelines}}
+
+      **Validation and freshness monitoring?**
+
+      {{quality_monitoring}}
+
+      **Version control and approval workflows?**
+
+      {{data_governance}}
+
+      **Unified Platform Strategy:**
+
+      {{unified_platform_choice}}
+
+      [[LLM: CRITICAL - Recommend unified platform (e.g., MongoDB Atlas) for app + vector + memory. Managing three databases kills momentum. Design validation pipelines.]]
+
+      ---
+
+      ### Square 6: Knowledge Base & Pipeline Operations
+
+      **How does knowledge evolve over time?**
+
+      {{knowledge_evolution}}
+
+      **Which embedding models for which content types?**
+
+      {{embedding_strategy}}
+
+      **Search relevance and reranking strategies?**
+
+      {{retrieval_optimization}}
+
+      **Pipeline health monitoring and cost tracking?**
+
+      {{pipeline_operations}}
+
+      [[LLM: Plan continuous knowledge improvement. Consider domain-specific embeddings (e.g., Voyage AI for technical content). Implement relevance feedback loops.]]
+
+  - title: "PHASE 4: MODEL OPERATIONS"
+    prompt: |
+      Manage model providers, fine-tuning, caching, and monitoring at scale.
+      Multi-provider strategy with failover. Cost optimization.
+
+    content: |
+      ---
+
+      ## PHASE 4: MODEL OPERATIONS
+
+      ### Square 7: Model Strategy & Optimization
+
+      **Which models for which tasks? (routing strategy)**
+
+      {{model_routing}}
+
+      **When and how to fine-tune vs. use base models?**
+
+      {{finetuning_strategy}}
+
+      **Caching strategies for cost reduction?**
+
+      {{caching_approach}}
+
+      **Intelligent routing (performance vs. cost)?**
+
+      {{optimization_strategy}}
+
+      [[LLM: Design multi-model strategy. Route simple tasks to cheaper models, complex to powerful. Implement semantic caching. Plan fine-tuning only when ROI clear.]]
+
+      ---
+
+      ### Square 8: API Management & Monitoring
+
+      **Key management and multi-provider failover?**
+
+      {{api_management}}
+
+      **Accuracy, latency, and cost monitoring?**
+
+      {{performance_monitoring}}
+
+      **Data collection for model improvement?**
+
+      {{improvement_data}}
+
+      **A/B testing and rollback strategies?**
+
+      {{testing_framework}}
+
+      [[LLM: Implement provider failover (if primary down, route to backup). Monitor all three metrics continuously. Enable A/B testing for prompt optimization. Plan rollback procedures.]]
+
+  - title: "PHASE 5: HARDENING AND OPERATIONS"
+    prompt: |
+      Final hardening: security, UX, governance. The difference between POC and production.
+      Address the gaps that stop 56% of projects.
+
+    content: |
+      ---
+
+      ## PHASE 5: HARDENING AND OPERATIONS
+
+      ### Square 9: Security & Compliance
+
+      **Authentication, encryption, and access management?**
+
+      {{security_framework}}
+
+      **User and system access controls?**
+
+      {{access_management}}
+
+      **Which regulations apply? (GDPR, CCPA, HIPAA, SOC 2, etc.)**
+
+      {{regulatory_compliance}}
+
+      **Logging, audit trails, and retention requirements?**
+
+      {{audit_strategy}}
+
+      [[LLM: CRITICAL - 56% of projects fail here. Design authentication, authorization, encryption. Map compliance requirements. Implement comprehensive audit logging.]]
+
+      ---
+
+      ### Square 10: User Experience & Adoption
+
+      **How do you fit into existing user workflows?**
+
+      {{workflow_integration}}
+
+      **Rollout strategy and user engagement plan?**
+
+      {{adoption_strategy}}
+
+      **Documentation, training, and support channels?**
+
+      {{user_enablement}}
+
+      **How does user feedback drive improvement?**
+
+      {{feedback_integration}}
+
+      [[LLM: Design for actual user workflows, not ideal scenarios. Plan phased rollout. Create comprehensive docs. Implement feedback loops for continuous improvement.]]
+
+      ---
+
+      ### Square 11: Continuous Improvement & Governance
+
+      **Maintenance cycles and release cadence?**
+
+      {{operations_cadence}}
+
+      **Testing, validation, and deployment standards?**
+
+      {{quality_standards}}
+
+      **Budget monitoring and cost optimization?**
+
+      {{financial_governance}}
+
+      **Documentation, runbooks, and team training?**
+
+      {{operational_readiness}}
+
+      **Governance Policies:**
+
+      {{governance_framework}}
+
+      [[LLM: Establish operational rigor. Define testing standards. Monitor costs continuously. Document everything. Create governance policies (92% say essential, 44% have them).]]
+
+      ---
+
+      ## PRODUCTION READINESS GATE
+
+      Before deployment, confirm:
+
+      **Business & Scale (Squares 1-2):**
+      - [ ] POC validated by real users
+      - [ ] Success metrics defined and measurable
+      - [ ] Scale projections based on data
+      - [ ] Production SLAs established
+      - [ ] Compliance requirements identified
+
+      **Architecture (Squares 3-4):**
+      - [ ] Multi-step workflow orchestration designed
+      - [ ] Fault tolerance and error handling implemented
+      - [ ] Memory architecture supports requirements
+      - [ ] Deployment strategy enables zero-downtime updates
+
+      **Data (Squares 5-6):**
+      - [ ] Unified data platform selected (avoid 3-database chaos)
+      - [ ] Data pipelines built and tested
+      - [ ] Quality monitoring in place
+      - [ ] Knowledge base operational
+
+      **Models (Squares 7-8):**
+      - [ ] Model routing strategy implemented
+      - [ ] Provider failover tested
+      - [ ] Monitoring dashboard operational
+      - [ ] A/B testing framework ready
+
+      **Hardening (Squares 9-11):**
+      - [ ] Security framework implemented
+      - [ ] Compliance requirements met
+      - [ ] Audit logging functional
+      - [ ] User adoption plan established
+      - [ ] Governance policies documented
+      - [ ] Operational runbooks created
+
+      **Only deploy when ALL boxes checked.**
+
+      ---
+
+      ## Success Patterns
+
+      **Moderna: 750+ Agents**
+      - CEO sponsorship
+      - Systematic canvas approach
+      - Production-grade infrastructure
+      - Business process transformation focus
+
+      **Your Goal:**
+      Not the most sophisticated agent. **Agents that deliver business value at scale.**
+
+      ---
+
+      ## Critical Statistics
+
+      - 95% of POCs fail when technology-first
+      - 80% of companies see no material earnings from gen AI
+      - 25% taking problem-first approach achieve transformative results
+      - 56% stopped by security/governance gaps
+      - 92% say governance essential, 44% have policies
+
+      **Be in the 25%. Not the 75%.**

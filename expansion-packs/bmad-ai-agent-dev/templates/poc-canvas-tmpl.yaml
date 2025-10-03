@@ -1,0 +1,259 @@
+name: POC Canvas - AI Agent Validation
+description: 8-square canvas for systematically validating AI agent concepts before building
+elicit: true
+
+sections:
+  - title: "PHASE 1: PRODUCT VALIDATION"
+    prompt: |
+      Guide the user through Squares 1-2 to validate the product vision and user interaction.
+      Be skeptical. Demand evidence. Prevent technology-first trap.
+
+    content: |
+      # POC Canvas: AI Agent Validation
+
+      ## Introduction
+
+      This POC Canvas guides you through systematic validation of your AI agent concept using the **Product → Agent → Data → Model** flow. Complete all 8 squares before building.
+
+      **Critical**: 95% of AI agent projects fail because they start with technology, not user problems. This canvas prevents that trap.
+
+      ---
+
+      ## PHASE 1: PRODUCT VALIDATION
+
+      ### Square 1: Product Vision & User Problem
+
+      **What specific workflow frustrates users today?**
+
+      {{user_workflow_problem}}
+
+      **Who experiences this pain and how often?**
+
+      {{target_users_and_frequency}}
+
+      **What would success look like for users?**
+
+      {{success_definition}}
+
+      **Why would users prefer an agent to current solutions?**
+
+      {{agent_value_proposition}}
+
+      **Validation Evidence:**
+
+      {{validation_evidence}}
+
+      [[LLM: Challenge vague answers. Ask for specific examples. Require evidence of user pain, not assumptions.]]
+
+      ---
+
+      ### Square 2: User Validation & Interaction
+
+      **What's the complete interaction from start to finish?**
+
+      {{interaction_flow}}
+
+      **How do users want to interact? (chat, voice, GUI, etc.)**
+
+      {{interaction_modality}}
+
+      **How will you know it's working?**
+
+      {{success_metrics}}
+
+      **What might prevent users from trying it?**
+
+      {{adoption_barriers}}
+
+      **Mitigation Strategy:**
+
+      {{barrier_mitigation}}
+
+      [[LLM: Map the full user journey. Identify friction points. Ensure success metrics are measurable.]]
+
+  - title: "PHASE 2: AGENT DESIGN"
+    prompt: |
+      Guide through Squares 3-4 to design agent capabilities and behavior.
+      Remember: Current AI completes only 24% of office tasks. Scope appropriately.
+
+    content: |
+      ---
+
+      ## PHASE 2: AGENT DESIGN
+
+      ### Square 3: Agent Capabilities & Workflow
+
+      **What specific actions must the agent perform?**
+
+      {{required_actions}}
+
+      **How should complex requests be broken down?**
+
+      {{task_decomposition}}
+
+      **What tools/capabilities does the agent need?**
+
+      {{tools_and_capabilities}}
+
+      **What can it decide vs. escalate to humans?**
+
+      {{autonomy_boundaries}}
+
+      [[LLM: Ensure capabilities are within current AI limitations (24% task completion). Break complex tasks into agent-sized steps. Define clear decision boundaries.]]
+
+      ---
+
+      ### Square 4: Agent Interaction & Memory
+
+      **How should the agent guide interactions?**
+
+      {{conversation_design}}
+
+      **What communication style fits the use case?**
+
+      {{agent_style}}
+
+      **What context must persist across interactions?**
+
+      {{memory_requirements}}
+
+      **How should confusion/errors be managed?**
+
+      {{error_handling}}
+
+      [[LLM: Design conversation flow for user success. Define tone (professional, friendly, concise, etc.). Specify session vs. long-term memory needs.]]
+
+  - title: "PHASE 3: DATA REQUIREMENTS"
+    prompt: |
+      Guide through Squares 5-6 to plan data requirements and collection.
+      Data needs flow from agent capabilities, not vice versa.
+
+    content: |
+      ---
+
+      ## PHASE 3: DATA REQUIREMENTS
+
+      ### Square 5: Knowledge Requirements & Sources
+
+      **What information must the agent have to complete tasks?**
+
+      {{required_knowledge}}
+
+      **Where does this knowledge currently exist?**
+
+      {{knowledge_sources}}
+
+      **How often does this information change?**
+
+      {{update_frequency}}
+
+      **What accuracy level is needed?**
+
+      {{quality_requirements}}
+
+      [[LLM: Map each agent capability to required knowledge. Identify authoritative sources. Define quality standards.]]
+
+      ---
+
+      ### Square 6: Data Collection & Enhancement Strategy
+
+      **How will initial data be gathered and prepared?**
+
+      {{collection_methodology}}
+
+      **What data has the biggest impact on agent performance?**
+
+      {{high_impact_data}}
+
+      **How will user interactions improve the data?**
+
+      {{feedback_loops}}
+
+      **How will data be ingested and kept fresh?**
+
+      {{update_strategy}}
+
+      [[LLM: Design data collection pipeline. Plan for continuous improvement from user feedback. Ensure update strategy maintains quality.]]
+
+  - title: "PHASE 4: EXTERNAL MODEL INTEGRATION"
+    prompt: |
+      Guide through Squares 7-8 for model selection and API integration.
+      Model selection comes LAST, after Product → Agent → Data.
+
+    content: |
+      ---
+
+      ## PHASE 4: EXTERNAL MODEL INTEGRATION
+
+      ### Square 7: Provider Selection & Prompt Engineering
+
+      **Which foundation models handle your requirements best?**
+
+      {{model_providers}}
+
+      **How should you structure requests for optimal results?**
+
+      {{prompt_strategy}}
+
+      **How do you work within token limits?**
+
+      {{token_optimization}}
+
+      **Is this economically viable at scale?**
+
+      {{cost_analysis}}
+
+      [[LLM: Compare providers on performance, latency, cost, reliability. Design prompts for consistent results. Calculate economics at 10x and 100x scale.]]
+
+      ---
+
+      ### Square 8: API Integration & Validation
+
+      **How do you connect to model providers?**
+
+      {{api_architecture}}
+
+      **How do you handle outputs and errors?**
+
+      {{output_processing}}
+
+      **Does it meet functional requirements?**
+
+      {{validation_results}}
+
+      **What needs hardening for production?**
+
+      {{hardening_requirements}}
+
+      [[LLM: Design integration architecture. Implement error handling and retries. Test against requirements. Document gaps for production.]]
+
+      ---
+
+      ## POC VALIDATION GATE
+
+      Before proceeding to build POC, confirm:
+
+      - [ ] Real users validated the problem exists (Square 1)
+      - [ ] User interaction model is clear (Square 2)
+      - [ ] Agent capabilities are scoped to AI limitations (Square 3)
+      - [ ] Conversation design and memory requirements defined (Square 4)
+      - [ ] Knowledge requirements mapped to sources (Square 5)
+      - [ ] Data collection strategy established (Square 6)
+      - [ ] Model providers selected with cost analysis (Square 7)
+      - [ ] API integration architecture designed (Square 8)
+
+      **Next Step:** Build POC, test with real users, gather feedback.
+
+      **Only scale what users validate they want.**
+
+      ---
+
+      ## Critical Reminders
+
+      - Start with problems, not technology
+      - Validate before scaling
+      - Current AI: 24% office task completion rate
+      - Economics must work at scale
+      - Focus on user outcomes, not technical sophistication
+
+      **Your goal: Agents that deliver business value, not impressive demos.**
